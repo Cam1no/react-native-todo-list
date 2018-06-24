@@ -5,7 +5,7 @@ import { createStore, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { Provider } from 'react-redux';
 import reducers from './src/reducers/';
-// import RootNavigator from './src/RootNavigator';
+import RootNavigator from './src/RootNavigator';
 import thunk from 'redux-thunk';
 import firebase from 'firebase';
 import firebaseConfig from './src/config/firebase';
@@ -18,7 +18,7 @@ export default class App extends React.Component {
   render() {
     return (
       <Provider store={store}>
-        <View><Text>HelloWorld</Text></View>
+        <RootNavigator/>
       </Provider>
     );
   }
